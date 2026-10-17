@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* SUBPAGE BODY */
+body.subpage-body {
+  background-color: #d1d5db;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  width: 100%;
+  background-color: #262626;
+  color: #ffffff;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-item {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 18px 15px;
+  text-align: center;
+  flex: 1;
+  border-right: 1px solid #404040;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar .nav-item:last-child {
+  border-right: none;
+}
+
+/* NAVBAR HOVER EFFECT */
+.navbar .nav-item:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.navbar .active-nav {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-weight: bold;
+  border-bottom: 3px solid #6b7280;
+}
+
+/* SUBPAGE CONTENT CONTAINER */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.page-title {
+  font-size: 38px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.page-subtitle {
+  font-size: 16px;
+  color: #374151;
+  margin-bottom: 35px;
+  font-style: italic;
+}
+
+
+.boxes-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; 
+}
+
+/* BASE CARD BOX */
+.info-card-box {
+  flex: 1;
+  min-width: 0;
+  min-height: 420px;
+  background-color: rgba(255, 255, 255, 0.45);
+  border: 1.5px solid #9ca3af;
+  border-radius: 20px;
+  padding: 22px;
+  text-align: left;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  
+  /* SMOOTH TRANSITION */
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background-color 0.3s ease, z-index 0s;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.info-card-box:hover {
+  z-index: 100; 
+  background-color: rgba(255, 255, 255, 0.95); 
+  border-color: #1f2937;
+  
+  transform: scale(1.18); 
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
+}
+
+.boxes-row:hover .info-card-box:not(:hover) {
+  opacity: 0.5;
+  filter: blur(1px);
+}
+
+.info-card-box .box-title {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #111827;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 8px;
+}
+
+.info-card-box ol, .info-card-box ul {
+  padding-left: 16px;
+  font-size: 15px; 
+  line-height: 1.4;
+  color: #1f2937;
+  margin: 0;
+}
+
+.info-card-box ol li {
+  margin-bottom: 8px;
+}
